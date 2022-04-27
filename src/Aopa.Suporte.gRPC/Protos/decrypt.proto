@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option csharp_namespace = "Aopa.Suporte.gRPC";
+
+package decrypt;
+
+service Decrypt {
+  rpc Encrypt (EncryptRequest) returns (EncryptResponse);
+  rpc Decrypt (DecryptRequest) returns (DecryptResponse);
+}
+
+message DecryptRequest {
+  string key = 1;
+  string body = 2;
+}
+
+message DecryptResponse {
+  string data = 1;
+}
+
+message EncryptRequest {
+  string key = 1;
+  string body = 2;
+}
+
+message EncryptResponse {
+  string data = 1;
+}

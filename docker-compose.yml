@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  aopa_suporte_api:
+    image: aopa_suporte_api
+    container_name: aopa_suporte_api
+    build:
+      context: .
+    ports:
+      - "5220:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
