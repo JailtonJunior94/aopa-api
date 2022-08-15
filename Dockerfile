@@ -2,7 +2,6 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /build
 
 COPY ["src/Aopa.Suporte.gRPC/Aopa.Suporte.gRPC.csproj", "src/Aopa.Suporte.gRPC/"]
-COPY ["src/Aopa.Suporte.Business/Aopa.Suporte.Business.csproj", "src/Aopa.Suporte.Business/"]
 
 RUN dotnet restore "src/Aopa.Suporte.gRPC/Aopa.Suporte.gRPC.csproj"
 COPY . .
